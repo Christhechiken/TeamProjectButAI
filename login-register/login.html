@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Đăng nhập vào không gian học tập Minischool.">
+  <title>Đăng nhập | Minischool</title>
+  <link rel="icon" href="../image/Favicon/favicon-32x32.png" type="image/png">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="login-register.css">
+</head>
+<body class="auth-page">
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Minischool, về trang chủ"><img src="../image/Favicon/favicon-32x32.png" alt="" width="32" height="32"><span>Mini<span class="brand__accent">school</span></span></a>
+    <nav class="site-nav" aria-label="Điều hướng chính"><a href="../index.html#tinh-nang">Tính năng</a><a href="../index.html#khoa-hoc">Lớp học</a><a href="../index.html#gioi-thieu">Giới thiệu</a></nav>
+    <div class="header-actions"><a class="button button--text" href="login.html" aria-current="page">Đăng nhập</a><a class="button button--primary button--small" href="register.html">Đăng ký</a></div>
+  </header>
+
+  <main class="auth-main">
+    <section class="auth-card" aria-labelledby="login-title">
+      <a class="auth-back-link" href="../index.html">← <span>Trang chủ</span></a>
+      <div class="auth-intro"><p class="eyebrow">Chào mừng trở lại</p><h1 id="login-title">Đăng nhập</h1><p>Tiếp tục hành trình học tập của bạn tại Minischool.</p></div>
+      <form class="auth-form" id="loginForm" novalidate>
+        <fieldset class="role-fieldset">
+          <legend>Bạn đăng nhập với vai trò</legend>
+          <div class="roles" data-selected-role="student" aria-label="Chọn vai trò đăng nhập">
+            <span class="roles__indicator" aria-hidden="true"></span>
+            <label class="role-option" for="role-admin"><input class="visually-hidden" id="role-admin" type="radio" name="role" value="admin"><span>Admin</span></label>
+            <label class="role-option" for="role-student"><input class="visually-hidden" id="role-student" type="radio" name="role" value="student" checked><span>Student</span></label>
+            <label class="role-option" for="role-teacher"><input class="visually-hidden" id="role-teacher" type="radio" name="role" value="teacher"><span>Teacher</span></label>
+          </div>
+        </fieldset>
+        <div class="field-group"><label for="login-username">Tên đăng nhập</label><input id="login-username" name="username" type="text" autocomplete="username" placeholder="Nhập tên đăng nhập" required></div>
+        <div class="field-group"><label for="login-password">Mật khẩu</label><input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="Nhập mật khẩu" required></div>
+        <div class="auth-form__meta"><a class="text-link" href="#recovery" id="show-recovery">Quên mật khẩu?</a></div>
+        <p class="form-message" id="login-message" role="alert" hidden></p>
+        <button class="button button--primary auth-submit" type="submit">Đăng nhập <span aria-hidden="true">→</span></button>
+      </form>
+      <p class="auth-switch">Chưa có tài khoản? <a class="text-link" href="register.html">Tạo tài khoản</a></p>
+
+      <section class="recovery-panel" id="recovery" aria-labelledby="recovery-title" hidden>
+        <button class="recovery-close" id="hide-recovery" type="button" aria-label="Đóng phần khôi phục mật khẩu">×</button>
+        <p class="eyebrow">Khôi phục tài khoản</p><h2 id="recovery-title">Đặt lại mật khẩu</h2>
+        <p class="recovery-panel__description">Nhập tên đăng nhập và email đã đăng ký để tạo mật khẩu mới cho tài khoản demo.</p>
+        <form class="auth-form" id="recoveryForm" novalidate>
+          <div class="field-group"><label for="recovery-username">Tên đăng nhập</label><input id="recovery-username" name="username" type="text" autocomplete="username" required></div>
+          <div class="field-group"><label for="recovery-email">Email tài khoản</label><input id="recovery-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field-group"><label for="recovery-password">Mật khẩu mới</label><input id="recovery-password" name="newPassword" type="password" autocomplete="new-password" minlength="6" required></div>
+          <p class="form-message" id="recovery-message" role="status" hidden></p>
+          <button class="button button--primary auth-submit" type="submit">Cập nhật mật khẩu</button>
+        </form>
+      </section>
+    </section>
+    <aside class="auth-aside" aria-label="Giới thiệu Minischool"><div class="auth-aside__content"><span class="auth-aside__mark" aria-hidden="true">M</span><p class="eyebrow">Không gian học tập của bạn</p><h2>Mỗi ngày đến lớp, thêm một bước tiến.</h2><p>Theo dõi lịch học, lớp học và thông tin của bạn ngay sau khi đăng nhập.</p></div><span class="auth-aside__caption">Minischool · Học tốt hơn, cùng nhau.</span></aside>
+  </main>
+  <footer class="auth-footer"><span>© 2026 Minischool</span><a href="mailto:hello@minischool.example">Cần hỗ trợ?</a></footer>
+  <script src="../db.js" defer></script>
+  <script src="login-register.js" defer></script>
+</body>
+</html>

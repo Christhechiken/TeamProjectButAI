@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Không gian giảng dạy Minischool dành cho giáo viên.">
+  <title>Giáo viên | Minischool</title>
+  <link rel="icon" href="../image/Favicon/favicon-32x32.png" type="image/png">
+  <link rel="stylesheet" href="../dashboard.css">
+</head>
+<body class="dashboard-page" data-role="teacher">
+  <aside class="sidebar">
+    <a class="dashboard-brand" href="../index.html"><img src="../image/Favicon/favicon-32x32.png" alt="" width="34" height="34"><span>Mini<span>school</span></span></a>
+    <p class="sidebar-label">GIẢNG DẠY</p>
+    <nav aria-label="Điều hướng giáo viên"><ul class="sidebar-menu" id="menu"></ul></nav>
+    <div class="sidebar-footer"><span class="sidebar-footer__dot"></span> Không gian giáo viên</div>
+  </aside>
+  <div class="dashboard-shell">
+    <header class="topbar"><div><p class="topbar__eyebrow">MINISCHOOL / GIÁO VIÊN</p><h1 class="topbar__title">Bảng điều khiển</h1></div><div class="topbar__account"><div class="account-avatar account-avatar--teacher" aria-hidden="true">T</div><div class="account-copy"><strong id="uname"></strong><span id="urole"></span></div><button class="button button--quiet" id="logout" type="button">Đăng xuất</button></div></header>
+    <main class="dashboard-content" id="view" tabindex="-1"></main>
+  </div>
+  <script src="../db.js" defer></script>
+  <script src="../dashboard.js" defer></script>
+</body>
+</html>

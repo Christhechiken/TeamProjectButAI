@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tạo tài khoản học sinh Minischool.">
+  <title>Đăng ký | Minischool</title>
+  <link rel="icon" href="../image/Favicon/favicon-32x32.png" type="image/png">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="login-register.css">
+</head>
+<body class="auth-page">
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Minischool, về trang chủ"><img src="../image/Favicon/favicon-32x32.png" alt="" width="32" height="32"><span>Mini<span class="brand__accent">school</span></span></a>
+    <nav class="site-nav" aria-label="Điều hướng chính"><a href="../index.html#tinh-nang">Tính năng</a><a href="../index.html#khoa-hoc">Lớp học</a><a href="../index.html#gioi-thieu">Giới thiệu</a></nav>
+    <div class="header-actions"><a class="button button--text" href="login.html">Đăng nhập</a><a class="button button--primary button--small" href="register.html" aria-current="page">Đăng ký</a></div>
+  </header>
+
+  <main class="auth-main auth-main--register">
+    <section class="auth-card" aria-labelledby="register-title">
+      <a class="auth-back-link" href="../index.html">← <span>Trang chủ</span></a>
+      <div class="auth-intro"><p class="eyebrow">Bắt đầu học tập</p><h1 id="register-title">Tạo tài khoản</h1><p>Đăng ký để gửi yêu cầu tham gia Minischool.</p></div>
+      <form class="auth-form" id="registerForm" novalidate>
+        <div class="field-group"><label for="register-name">Họ và tên</label><input id="register-name" name="name" type="text" autocomplete="name" placeholder="Ví dụ: Nguyễn Minh Anh" required></div>
+        <div class="field-group"><label for="register-username">Tên đăng nhập</label><input id="register-username" name="username" type="text" autocomplete="username" placeholder="Tạo tên đăng nhập" required></div>
+        <div class="field-group"><label for="register-email">Email</label><input id="register-email" name="email" type="email" autocomplete="email" placeholder="ban@email.com" required></div>
+        <div class="field-group"><label for="register-phone">Số điện thoại</label><input id="register-phone" name="phone" type="tel" autocomplete="tel" placeholder="Nhập số điện thoại" required></div>
+        <div class="field-group"><label for="register-password">Mật khẩu</label><input id="register-password" name="password" type="password" autocomplete="new-password" minlength="6" placeholder="Ít nhất 6 ký tự" required></div>
+        <p class="form-message" id="register-message" role="alert" hidden></p>
+        <button class="button button--primary auth-submit" type="submit">Gửi yêu cầu đăng ký <span aria-hidden="true">→</span></button>
+      </form>
+      <p class="auth-switch">Đã có tài khoản? <a class="text-link" href="login.html">Đăng nhập</a></p>
+      <p class="auth-footnote">Yêu cầu tạo tài khoản học sinh sẽ được quản trị viên duyệt.</p>
+    </section>
+    <aside class="auth-aside auth-aside--register" aria-label="Giới thiệu Minischool"><div class="auth-aside__content"><span class="auth-aside__mark" aria-hidden="true">M</span><p class="eyebrow">Học tập theo cách của bạn</p><h2>Đăng ký hôm nay, sẵn sàng cho buổi học tiếp theo.</h2><p>Gửi thông tin đăng ký và quản trị viên sẽ phản hồi sau khi duyệt tài khoản.</p></div><span class="auth-aside__caption">Minischool · Học tốt hơn, cùng nhau.</span></aside>
+  </main>
+  <footer class="auth-footer"><span>© 2026 Minischool</span><a href="mailto:hello@minischool.example">Cần hỗ trợ?</a></footer>
+  <script src="../db.js" defer></script>
+  <script src="login-register.js" defer></script>
+</body>
+</html>
